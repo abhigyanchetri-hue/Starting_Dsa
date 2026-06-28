@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+//sum of first n terms using recursion
  
 int sum(int n){
     if (n==0) return 0;
