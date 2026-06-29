@@ -3,33 +3,33 @@ using namespace std;
 
 // //hashing for array of numbers
 
-// int main(){
-//     int size;
-//     cin>>size;
-//     int arr[size];
-//     for(int i=0; i<size; i++){
-//         cin>>arr[i];
-//     }
+int main(){
+    int size;
+    cin>>size;
+    int arr[size];
+    for(int i=0; i<size; i++){
+        cin>>arr[i];
+    }
 
-//     //pre compute (hashing)
+    //pre compute (hashing)
 
-//     int hash[13]={0};
-//     for(int i=0; i<size; i++){
-//         hash[arr[i]]++;
-//     }
+    int hash[13]={0};
+    for(int i=0; i<size; i++){
+        hash[arr[i]]++;
+    }
 
-//     //fetching queries
+    //fetching queries
 
-//     int q;
+    int q;
     
-//     cin>>q;
-//     for(int i=0; i<q; i++){
-//         int number;
-//         cin>>number;
-//         cout<<hash[number]<<endl;
-//     }
+    cin>>q;
+    for(int i=0; i<q; i++){
+        int number;
+        cin>>number;
+        cout<<hash[number]<<endl;
+    }
 
-// }
+}
 
 
 
