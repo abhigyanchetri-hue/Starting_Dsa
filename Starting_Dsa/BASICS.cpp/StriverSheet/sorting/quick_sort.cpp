@@ -6,10 +6,10 @@ int partition(vector <int>& arr, int low, int high){
     int i = low;
     int j = high;
     while (i<j){
-        while (arr[i]<=pivot && i<=high-1){
+        while ((arr[i]<=pivot) && (i<=high-1)){
             i++;
         }
-        while(arr[j]>pivot && j>=low+1){
+        while((arr[j]>pivot) && (j>=low+1)){
             j--;
         }
         if (i<j){
@@ -22,7 +22,7 @@ int partition(vector <int>& arr, int low, int high){
 void qS(vector <int>& arr, int low, int high){
     if (low<high){
         int pIndex = partition(arr, low , high);
-        qS(arr, low, pIndex);
+        qS(arr, low, pIndex-1);
         qS(arr, pIndex +1, high);
     }
 }
