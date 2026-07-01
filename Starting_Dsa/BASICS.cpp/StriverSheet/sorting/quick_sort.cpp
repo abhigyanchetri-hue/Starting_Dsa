@@ -30,7 +30,7 @@ void qS(vector <int>& arr, int low, int high){
 int main(){
     int n;
     cin>>n;
-    vector <int> arr;
+    vector <int> arr(n);
     for (int i=0; i<n; i++){
         cin>>arr[i];
     }
