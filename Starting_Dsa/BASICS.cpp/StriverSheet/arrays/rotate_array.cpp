@@ -38,3 +38,6 @@ int main(){
     
     return 0;
 }
+
+//Brute = Store some elements in temp[] shift the remaining ones then place the temp elements back on the remaining spaces.
+//optimal = use reverse function.. first reverse both parts seperately and then reverse the whole array or vice versa for right rotation.
