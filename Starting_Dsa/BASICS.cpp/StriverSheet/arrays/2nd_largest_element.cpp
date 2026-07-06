@@ -1,6 +1,40 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Brute
+
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for (int i = 0; i<n; i++){
+        cin>>arr[i];
+    }
+    set <int> st;
+    for (int i =0; i<n; i++){
+        st.insert(arr[i]);
+    }
+    int lar = *st.rbegin();
+    int slar;
+    if (*st.begin()==lar){
+        cout<<-1;
+    }else{
+        for (auto it = st.rbegin(); it!=st.rend(); it++ ){
+            if (*it!=lar){
+            slar=*it;
+            break;
+            }
+        }
+        cout<<slar;
+    }
+    return 0;
+}
+
+//Optimal
+
+#include<bits/stdc++.h>
+using namespace std;
+
 int slargest(vector<int>& arr,int n){
     int largest = arr[0];
     int slargest= INT_MIN;
