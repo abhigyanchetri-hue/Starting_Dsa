@@ -1,59 +1,59 @@
-// #include<bits/stdc++.h>
-// using namespace std;
+#include<bits/stdc++.h>
+using namespace std;
 
-// //Brute
+//Brute
 
-// int maj(int arr[], int n){
-//     for (int i=0; i<n; i++){
-//         int cnt=0;
-//         for (int j=0; j<n; j++){
-//             if (arr[j]==arr[i]){
-//                 cnt+=1;
-//             }
-//         }if (cnt>n/2){
-//             return arr[i];
-//         }
-//     }return -1;
-// }
+int maj(int arr[], int n){
+    for (int i=0; i<n; i++){
+        int cnt=0;
+        for (int j=0; j<n; j++){
+            if (arr[j]==arr[i]){
+                cnt+=1;
+            }
+        }if (cnt>n/2){
+            return arr[i];
+        }
+    }return -1;
+}
 
-// int main(){
-//     int n;
-//     cin>>n;
-//     int arr[n];
-//     for(int i=0; i<n; i++){
-//         cin>>arr[i];
-//     }
-//     cout<<maj(arr,n);
-//     return 0;
-// }
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    cout<<maj(arr,n);
+    return 0;
+}
 
 //Better (hashing)
 
-// #include<bits/stdc++.h>
-// using namespace std;
+#include<bits/stdc++.h>
+using namespace std;
 
-// int maj(int arr[], int n){
-//     map<int,int> hash;
-//     for (int i=0; i<n;i++){
-//         hash[arr[i]]++;
-//     }
-//     for (auto it: hash){
-//         if (it.second > n/2){
-//             return it.first;
-//         }
-//     }return -1;
-// }
+int maj(int arr[], int n){
+    map<int,int> hash;
+    for (int i=0; i<n;i++){
+        hash[arr[i]]++;
+    }
+    for (auto it: hash){
+        if (it.second > n/2){
+            return it.first;
+        }
+    }return -1;
+}
 
-// int main(){
-//     int n;
-//     cin>>n;
-//     int arr[n];
-//     for(int i=0; i<n; i++){
-//         cin>>arr[i];
-//     }
-//     cout<<maj(arr,n);
-//     return 0;
-// }
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    cout<<maj(arr,n);
+    return 0;
+}
 
 //Optimal (Moore's Voting alogorithm)
 
