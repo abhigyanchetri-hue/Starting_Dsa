@@ -82,24 +82,45 @@
 using namespace std;
 
 int main(){
-    int matrix[4][4]={{1,1,0,1},{1,1,1,1},{0,1,1,1},{1,1,1,1}};
+    system("cls");
+    int col0 = 1;
+    int matrix[4][4]={{1,1,1,1},{1,0,1,1},{1,1,0,1},{0,1,1,1}};
     for (int i=0; i<4; i++){
         for (int j=0; j<4; j++){
             if (matrix[i][j]==0){
-                //row check 
-                matrix[i][0];
-                //col check
-                matrix[0][j];
+                //row mark 
+                matrix[i][0]=0;
+                //col mark
+                if (j!=0){
+                    matrix[0][j]=0;
+                }else {
+                    col0 = 0;
+                }
             }
         }
     }
-    for (int i=3; i>=1; i--){
-        for (int j=3; j>=1; j--){
-            if (matrix[0][j]==0 || matrix[i][0]){
+    for (int i=1; i<4; i++){
+        for (int j=1; j<4; j++){
+            if ( matrix[0][j]==0 || matrix[i][0]==0){
                 matrix[i][j]=0;
             }
         }
     }
-    for (int i)
+    if (matrix[0][0]==0){
+        for (int i=1; i<4; i++){
+            matrix[0][i]=0;
+        }
+    }
+    if (col0 == 0){
+        for (int i=0; i<4; i++){
+            matrix[i][0]=0;
+        }
+    }
+
+    for (int i=0; i<4; i++){
+        for (int j=0; j<4; j++){
+            cout<<matrix[i][j]<<" ";
+        }cout<<endl;
+    }
     return 0;
 }
