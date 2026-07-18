@@ -34,7 +34,7 @@ int main(){
 #include<bits/stdc++.h>
 using namespace std;
 
-int subArr(vector<int> arr, int n; int k){
+int subArr(vector<int> arr, int n, int k){
     int preSum = 0;
     int cnt = 0;
     map<int, int> mpp;
@@ -43,6 +43,7 @@ int subArr(vector<int> arr, int n; int k){
         preSum+=arr[i];
         int remove = preSum-k;
         cnt+=mpp[remove];
+        mpp[preSum]++;
     }
     return cnt;
 }
