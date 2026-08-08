@@ -1,4 +1,10 @@
 <style>
+    .website-anchor{
+        transition: color 0.5s;
+    }
+    .website-anchor:hover{
+        color: orange;
+    }
     .para-1{
         font-weight: bold;
         font-size:40px;
@@ -21,6 +27,13 @@
         height:40px;
         font-weight:bold;
         margin-right:20px;
+        transition: opacity 0.5s;
+    }
+    .button-1:hover{
+        opacity: 0.7;
+    }
+    .button-1:active{
+        opacity: 0.5;
     }
     .button-2{
         background-color:orange;
@@ -29,11 +42,17 @@
         font-weight:bold;
         width:155px;
         height:40px;
-
+        transition: opacity 0.5s;
+    }
+    .button-2:hover{
+        opacity: 0.7;
+    }
+    .button-2:active{
+        opacity: 0.5;
     }
 </style>
 
-<a href="https://www.amazon.in/" target="_blank">Back to Amazon</a>
+<a href="https://www.amazon.in/" target="_blank" class="website-anchor">Back to Amazon</a>
 <p class="para-1">Nike Black Running Shoes</p>
 <p class="para-2">$39 - in stock</p>
 <p class="para-3">Free delivery tomorrow.</p>
