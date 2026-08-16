@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex-3</title>
+        <style>
+            .red-square{
+                border-style: solid;
+                width: 300px;
+                height:100px;
+                border-width: 2px;
+                border-color: black;
+            }
+            .text{
+                padding-left:50px
+            }
+            .yes{
+                margin-left: 50px
+            }
+            .google{
+                margin-top: 50px;
+                height: 200px;
+                width: 500px;
+            }
+            .g{
+                color: blue;
+                font-size: 50px;
+                padding-left: 50px; 
+                font-family: "Segoe UI", Tahoma, sans-serif;  
+            }
+            .o{
+                font-family: "Segoe UI", Tahoma, sans-serif;
+                color: red;
+                font-size: 50px;
+                
+            }
+            .oo{
+                font-family: "Segoe UI", Tahoma, sans-serif;
+                color: yellow;
+                font-size: 50px;
+                
+            }
+            .gg{
+                font-family: "Segoe UI", Tahoma, sans-serif;
+                color: blue;
+                font-size: 50px;
+                
+            }
+            .l{
+                font-family: "Segoe UI", Tahoma, sans-serif;
+                color: rgb(16, 179, 16);
+                font-size: 50px;
+            }
+            .e{
+                font-family: "Segoe UI", Tahoma, sans-serif;
+                color: red;
+                font-size: 50px;
+            }
+            .box{
+                display: block;
+                margin-bottom:20px;
+                width: 250px;
+                height: 25px;
+                margin-left: 10px;
+                border-radius: 20px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(215, 215, 215);
+                box-shadow: 2 2 2 rgba(0, 0, 0, 0.5);
+            }
+            .box::placeholder{
+                padding-left:10px;
+            }
+            .googlee{
+                margin-left: 15px;
+                border-style: solid;
+                border: none;
+            }
+            .lucky{
+                border: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="red-square">
+            <p class="text">Satisfied with our service?</p>
+            <button class="yes">Yes</button>
+            <button>No</button>
+        </div>
+        <div class="google">
+            <p> <span class="g" >G</span> <span class="o">o</span> <span class="oo">o</span> <span class="gg">g</span> <span class="l" >l</span> <span class="e" >e</span></p>
+            <input class="box" type="text" placeholder="Search Google or type a URL" >
+            <button class="googlee" >Google Search</button>
+            <button class="lucky" >I'm Feeling Lucky</button>
+        </div>
+    </body>
+</html>
